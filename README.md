@@ -1,1 +1,7 @@
-Dotfiles for vim, nvim, bash, and tmux
+Dotfiles for vim, nvim, zsh, and tmux
+
+To install, run:
+
+```
+source install.sh
+```

@@ -15,7 +15,12 @@ call vundle#rc()
 
 Plugin 'gmarik/vundle'
 Plugin 'JuliaEditorSupport/julia-vim'
-" Plugin 'Valloric/YouCompleteMe'
+Plugin 'christoomey/vim-tmux-navigator'
+Plugin 'Valloric/YouCompleteMe'
+
+" Debugging for YCM Plugin
+let g:ycm_server_keep_logfiles = 1
+let g:ycm_server_log_level = 'debug'
 
 " Apparently necessary for vundle
 filetype plugin on
@@ -117,3 +122,6 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" Capture mouse scroll events (don't let tmux take hostage!)
+set mouse=a
