@@ -125,3 +125,6 @@ nnoremap <C-H> <C-W><C-H>
 
 " Capture mouse scroll events (don't let tmux take hostage!)
 set mouse=a
+
+" Reload files that are changed on file system (useful for git branches)
+set autoread
