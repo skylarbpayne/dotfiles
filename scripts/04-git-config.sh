@@ -29,6 +29,11 @@ configure_git() {
     git config --global push.default simple
     git config --global push.followTags true
 
+    # Configure Git to use SSH instead of HTTPS for GitHub
+    # This ensures we use the SSH key we generated in step 2
+    git config --global url."git@github.com:".insteadOf "https://github.com/"
+    log_info "✓ Configured Git to use SSH for GitHub (instead of HTTPS)"
+
     log_info "✓ Git configuration complete:"
     log_info "  Name:  $(git config --global user.name)"
     log_info "  Email: $(git config --global user.email)"

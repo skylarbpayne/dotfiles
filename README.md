@@ -17,6 +17,15 @@ Automated macOS bootstrap system for homelab Mac mini with minimal, focused conf
 
 ### First-Time Setup (New Mac)
 
+**Option 1: One-Line Install (Recommended)**
+
+Run this single command to clone and bootstrap everything:
+```bash
+curl -fsSL https://raw.githubusercontent.com/skylarbpayne/dotfiles/master/install.sh | bash
+```
+
+**Option 2: Manual Install**
+
 1. **Clone the repository:**
    ```bash
    git clone https://github.com/skylarbpayne/dotfiles.git ~/.dotfiles
@@ -32,7 +41,7 @@ Automated macOS bootstrap system for homelab Mac mini with minimal, focused conf
    - Install Xcode Command Line Tools
    - Generate SSH key (ed25519) and pause for GitHub setup
    - Install Homebrew package manager
-   - Configure Git with your identity
+   - Configure Git with your identity and SSH authentication
    - Install CLI tools (vim, tmux, zsh, git, gh, htop, jq, fzf, ripgrep, bat, eza, etc.)
    - Install GUI applications (Chrome, VS Code, iTerm2, Rectangle, Raycast, Obsidian, Docker)
    - Install Claude Code CLI (via official installer)
