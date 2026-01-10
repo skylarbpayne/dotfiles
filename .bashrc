@@ -6,3 +6,5 @@ alias vim='nvim'
 export EDITOR='/usr/local/bin/mvim -v'
 export PATH="$PATH:$HOME/bin"
 export GOPATH="$HOME/go"
+
+. "$HOME/.local/bin/env"

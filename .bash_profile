@@ -15,3 +15,5 @@ export PATH="/Users/skylarpayne/miniconda2/bin:$PATH"
 
 # added by Anaconda3 5.0.0 installer
 export PATH="/Users/skylarpayne/anaconda3/bin:$PATH"
+
+. "$HOME/.local/bin/env"

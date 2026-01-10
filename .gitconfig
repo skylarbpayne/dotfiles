@@ -1,0 +1,40 @@
+[user]
+	name = Skylar Payne
+	email = me@skylarbpayne.com
+
+[init]
+	defaultBranch = main
+
+[pull]
+	rebase = false
+
+[core]
+	editor = vim
+    autocrlf = input
+
+[push]
+	default = simple
+	followTags = true
+
+[alias]
+    st = status
+    co = checkout
+    br = branch
+    ci = commit
+    lg = log --graph --oneline --decorate --all
+    last = log -1 HEAD
+    unstage = reset HEAD --
+    uncommit = reset --soft HEAD^
+
+[color]
+    ui = auto
+
+[diff]
+    tool = vimdiff
+
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+
+[fetch]
+    prune = true
