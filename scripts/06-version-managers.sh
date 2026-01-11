@@ -32,10 +32,13 @@ install_version_managers() {
     fi
 
     # Install latest LTS Node via nvm
+    # Temporarily disable 'set -u' because nvm has unbound variables
     if command -v nvm &>/dev/null; then
         log_info "Installing Node.js LTS via nvm..."
+        set +u
         nvm install --lts
         nvm use --lts
+        set -u
         log_info "  ✓ Node.js $(node --version) installed"
     else
         log_warn "  Could not load nvm - Node.js LTS not installed via nvm"
