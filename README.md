@@ -21,7 +21,7 @@ Automated macOS bootstrap system for homelab Mac mini with minimal, focused conf
 
 Run this single command to clone and bootstrap everything:
 ```bash
-curl -fsSL https://raw.githubusercontent.com/skylarbpayne/dotfiles/master/install.sh | bash
+curl -fsSL https://raw.githubusercontent.com/skylarbpayne/dotfiles/main/install.sh | bash
 ```
 
 **Option 2: Manual Install**
