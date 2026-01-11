@@ -181,4 +181,5 @@ extract() {
 # Load local configuration if it exists
 [ -f ~/.zshrc.local ] && source ~/.zshrc.local
 
-. "$HOME/.local/bin/env"
+# Load uv/rye environment if it exists
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
