@@ -33,6 +33,7 @@ CLI_MONITORING=(
 CLI_DEV=(
     "mackup"
     "node"  # Required for coc.nvim
+    "direnv"
 )
 
 # Infrastructure

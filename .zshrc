@@ -20,6 +20,23 @@ plugins=(
 source $ZSH/oh-my-zsh.sh
 
 # ============================================================================
+# Tmux Auto-start
+# ============================================================================
+
+# Start tmux automatically if:
+# - tmux is installed
+# - we're in an interactive shell
+# - we're not already inside tmux
+# - we're not in a VS Code terminal or other IDE terminals
+if command -v tmux &> /dev/null && \
+   [[ -z "$TMUX" ]] && \
+   [[ $- == *i* ]] && \
+   [[ -z "$VSCODE_INJECTION" ]] && \
+   [[ -z "$INTELLIJ_ENVIRONMENT_READER" ]]; then
+    tmux attach -t default 2>/dev/null || tmux new -s default
+fi
+
+# ============================================================================
 # User Configuration
 # ============================================================================
 
@@ -183,3 +200,8 @@ extract() {
 
 # Load uv/rye environment if it exists
 [ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
+
+# direnv hook (must be at end of file after all shell modifications)
+if command -v direnv &> /dev/null; then
+    eval "$(direnv hook zsh)"
+fi

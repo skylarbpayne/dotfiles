@@ -8,6 +8,14 @@
 setup_vim_plugins() {
     log_info "Setting up Vim plugins..."
 
+    # Clean up old Vundle installation if present
+    if [[ -d "$HOME/.vim/bundle/Vundle.vim" ]] || [[ -d "$HOME/.vim/plugin/Vundle.vim" ]]; then
+        log_info "Removing old Vundle installation..."
+        rm -rf "$HOME/.vim/bundle"
+        rm -rf "$HOME/.vim/plugin/Vundle.vim"
+        log_info "  ✓ Vundle removed"
+    fi
+
     # Install vim-plug for Vim
     VIM_PLUG_PATH="$HOME/.vim/autoload/plug.vim"
     if [[ ! -f "$VIM_PLUG_PATH" ]]; then

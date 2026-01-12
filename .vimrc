@@ -19,6 +19,9 @@ endif
 
 call plug#begin('~/.vim/plugged')
 
+" Colorscheme
+Plug 'altercation/vim-colors-solarized'
+
 " Intellisense engine
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 
@@ -100,6 +103,12 @@ set signcolumn=yes
 " ============================================================================
 " Color Scheme
 " ============================================================================
+
+" Enable 24-bit true color - makes colorschemes work consistently across terminals
+" without requiring the terminal to have matching color profiles
+if has('termguicolors')
+  set termguicolors
+endif
 
 set background=dark
 
